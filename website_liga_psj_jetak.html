@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIGA PSJ 2026 - Klasemen & Jadwal Pertandingan</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Inter & Font Awesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            green: '#16a34a',
+                            darkgreen: '#14532d',
+                            accent: '#f59e0b',
+                            blue: '#1e40af',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+        .tab-active {
+            border-bottom: 3px solid #16a34a;
+            color: #16a34a;
+            font-weight: 700;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+        }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- TOP HEADER / NAVBAR -->
+    <header class="bg-gradient-to-r from-emerald-700 via-green-600 to-teal-700 text-white shadow-md sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-amber-400 text-emerald-900 rounded-full flex items-center justify-center font-black text-xl shadow-inner border-2 border-white">
+                    ⚽
+                </div>
+                <div>
+                    <h1 class="font-extrabold text-lg sm:text-xl tracking-tight leading-none">LIGA PSJ 2026</h1>
+                    <p class="text-xs text-emerald-100 font-medium">Putra Anak Kecil • Lapangan Jetak</p>
+                </div>
+            </div>
+            <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-800/60 text-amber-300 border border-emerald-400/30">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse mr-1.5"></span> Matchday 1 Selesai
+            </span>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4 py-6 w-full flex-grow space-y-6">
+
+        <!-- HERO BANNER -->
+        <div class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-emerald-800 via-green-700 to-teal-900 text-white shadow-xl p-6 sm:p-8">
+            <div class="absolute -right-10 -bottom-10 opacity-15 pointer-events-none text-9xl">
+                ⚽
+            </div>
+            <div class="relative z-10 max-w-2xl">
+                <div class="inline-block px-3 py-1 bg-amber-400 text-emerald-950 font-extrabold text-xs rounded-full uppercase tracking-wider mb-3 shadow">
+                    Sepak Bola Anak RT Jetak
+                </div>
+                <h2 class="text-2xl sm:text-4xl font-black tracking-tight leading-tight mb-2">
+                    Klasemen & Jadwal Pertandingan Harian
+                </h2>
+                <p class="text-emerald-100 text-sm sm:text-base mb-4 font-normal">
+                    Turnamen liga penuh 5 Tim RT (RT 1, RT 2, RT 4, RT 6, RT 7) khusus kelompok anak-anak. Pertandingan berlangsung setiap jam 16:00 WIB di Lapangan Jetak.
+                </p>
+                <div class="flex flex-wrap gap-2 text-xs font-medium">
+                    <span class="bg-emerald-900/60 backdrop-blur px-3 py-1.5 rounded-lg border border-emerald-500/30">
+                        <i class="fa-regular fa-clock text-amber-300 mr-1"></i> Kickoff: 16.00 WIB
+                    </span>
+                    <span class="bg-emerald-900/60 backdrop-blur px-3 py-1.5 rounded-lg border border-emerald-500/30">
+                        <i class="fa-solid fa-location-dot text-amber-300 mr-1"></i> Lapangan Jetak
+                    </span>
+                    <span class="bg-emerald-900/60 backdrop-blur px-3 py-1.5 rounded-lg border border-emerald-500/30">
+                        <i class="fa-solid fa-trophy text-amber-300 mr-1"></i> 10 Pertandingan Non-Stop
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- HIGHLIGHT HASIL TERBARU (MATCH 1) -->
+        <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-200">
+            <div class="flex items-center justify-between mb-3">
+                <h3 class="font-bold text-slate-700 text-sm uppercase tracking-wide flex items-center">
+                    <i class="fa-solid fa-bolt text-amber-500 mr-2"></i> Hasil Pertandingan Terakhir
+                </h3>
+                <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2.5 py-1 rounded-full">Tgl 1 • Match 1</span>
+            </div>
+            
+            <div class="bg-gradient-to-r from-slate-50 via-emerald-50/50 to-slate-50 rounded-xl p-4 border border-emerald-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <!-- Tim RT 4 -->
+                <div class="flex items-center space-x-3 w-full sm:w-2/5 justify-start sm:justify-end">
+                    <span class="font-bold text-slate-800 text-base sm:text-lg">RT 4</span>
+                    <div class="w-9 h-9 rounded-full bg-blue-100 text-blue-700 font-extrabold flex items-center justify-center text-xs shadow-sm">
+                        🦁
+                    </div>
+                </div>
+
+                <!-- Skor -->
+                <div class="flex items-center space-x-3 bg-white px-5 py-2 rounded-xl shadow-sm border border-slate-200">
+                    <span class="text-2xl font-black text-slate-600">1</span>
+                    <span class="text-xs font-bold text-slate-400 uppercase">VS</span>
+                    <span class="text-2xl font-black text-emerald-600">2</span>
+                </div>
+
+                <!-- Tim RT 2 -->
+                <div class="flex items-center space-x-3 w-full sm:w-2/5 justify-end sm:justify-start">
+                    <div class="w-9 h-9 rounded-full bg-amber-100 text-amber-800 font-extrabold flex items-center justify-center text-xs shadow-sm">
+                        🐂
+                    </div>
+                    <div class="text-right sm:text-left">
+                        <span class="font-bold text-slate-800 text-base sm:text-lg block">RT 2</span>
+                        <span class="text-[10px] font-extrabold text-emerald-600 bg-emerald-100 px-1.5 py-0.5 rounded">MENANG!</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- NAVIGATION TABS -->
+        <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-1 flex space-x-1">
+            <button onclick="switchTab('klasemen')" id="tab-klasemen" class="flex-1 py-2.5 text-center text-sm font-semibold rounded-lg transition-all tab-active">
+                <i class="fa-solid fa-list-ol mr-1.5"></i> Klasemen Sementara
+            </button>
+            <button onclick="switchTab('jadwal')" id="tab-jadwal" class="flex-1 py-2.5 text-center text-sm font-semibold rounded-lg text-slate-600 hover:text-slate-900 transition-all">
+                <i class="fa-regular fa-calendar-days mr-1.5"></i> Jadwal Harian (1-10)
+            </button>
+        </div>
+
+        <!-- TAB CONTENT 1: KLASEMEN SEMENTARA -->
+        <div id="content-klasemen" class="space-y-4">
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+                <div class="px-5 py-4 bg-slate-50 border-b border-slate-200 flex justify-between items-center">
+                    <div>
+                        <h3 class="font-extrabold text-slate-800 text-base">Tabel Peringkat</h3>
+                        <p class="text-xs text-slate-500">Update setelah Matchday 1 (RT 4 vs RT 2)</p>
+                    </div>
+                    <span class="text-xs bg-emerald-100 text-emerald-800 font-bold px-2.5 py-1 rounded-full border border-emerald-200">
+                        5 Tim Peserta
+                    </span>
+                </div>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm text-left">
+                        <thead class="text-xs uppercase bg-slate-800 text-slate-200 font-bold">
+                            <tr>
+                                <th class="px-4 py-3 text-center w-12">Pos</th>
+                                <th class="px-4 py-3">Tim RT</th>
+                                <th class="px-3 py-3 text-center">Main</th>
+                                <th class="px-3 py-3 text-center">M</th>
+                                <th class="px-3 py-3 text-center">S</th>
+                                <th class="px-3 py-3 text-center">K</th>
+                                <th class="px-3 py-3 text-center">GM</th>
+                                <th class="px-3 py-3 text-center">GK</th>
+                                <th class="px-3 py-3 text-center">SG</th>
+                                <th class="px-4 py-3 text-center font-black text-amber-300 bg-slate-900">Poin</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100">
+                            <!-- Posisi 1 -->
+                            <tr class="bg-emerald-50/70 font-semibold text-slate-900 hover:bg-emerald-100/60 transition">
+                                <td class="px-4 py-3.5 text-center font-black">
+                                    <span class="w-6 h-6 rounded-full bg-amber-400 text-amber-950 inline-flex items-center justify-center text-xs font-bold">1</span>
+                                </td>
+                                <td class="px-4 py-3.5 font-bold flex items-center space-x-2">
+                                    <span class="text-base">🐂</span>
+                                    <span>RT 2</span>
+                                    <span class="text-[10px] bg-emerald-600 text-white font-bold px-1.5 py-0.5 rounded ml-1">Puncak</span>
+                                </td>
+                                <td class="px-3 py-3.5 text-center">1</td>
+                                <td class="px-3 py-3.5 text-center text-emerald-600 font-bold">1</td>
+                                <td class="px-3 py-3.5 text-center text-slate-400">0</td>
+                                <td class="px-3 py-3.5 text-center text-slate-400">0</td>
+                                <td class="px-3 py-3.5 text-center">2</td>
+                                <td class="px-3 py-3.5 text-center">1</td>
+                                <td class="px-3 py-3.5 text-center text-emerald-600 font-bold">+1</td>
+                                <td class="px-4 py-3.5 text-center font-black text-emerald-700 bg-emerald-100/80 text-base">3</td>
+                            </tr>
+                            <!-- Posisi 2 -->
+                            <tr class="hover:bg-slate-50 transition">
+                                <td class="px-4 py-3.5 text-center font-bold text-slate-500">2</td>
+                                <td class="px-4 py-3.5 font-bold text-slate-800">
+                                    <span class="mr-1">🔴</span> RT 1
+                                </td>
+                                <td class="px-3 py-3.5 text-center">0</td>
+                                <td class="px-3 py-3.5 text-center">0</td>
+                                <td class="px-3 py-3.5 text-center">0</td>
+                                <td class="px-3 py-3.5 text-center">0</td>
+                                <td class="px-3 py-3.5 text-center">0</td>
+                                <td class="px-3 py-3.5 text-center">0</td>
+                                <td class="px-3 py-3.5 text-center">0</td>
+                                <td class="px-4 py-3.5 text-center font-bold text-slate-700 bg-slate-50">0</td>
+                            </tr>
+                            <!-- Posisi 3 -->
+                            <tr class="hover:bg-slate-50 transition">
+                                <td class="px-4 py-3.5 text-center font-bold text-slate-500">3</td>
+                                <td class="px-4 py-3.5 font-bold text-slate-800">
+                                    <span class="mr-1">🟢</span> RT 6
+                                </td>
+                                <td class="px-3 py-3.5 text-center">0</td>
+                                <td class="px-3 py-3.5 text-center">0</td>
+                                <td class="px-3 py-3.5 text-center">0</td>
+                                <td class="px-3 py-3.5 text-center">0</td>
+                                <td class="px-3 py-3.5 text-center">0</td>
+                                <td class="px-3 py-3.5 text-center">0</td>
+                                <td class="px-3 py-3.5 text-center">0</td>
+                                <td class="px-4 py-3.5 text-center font-bold text-slate-700 bg-slate-50">0</td>
+                            </tr>
+                            <!-- Posisi 4 -->
+                            <tr class="hover:bg-slate-50 transition">
+                                <td class="px-4 py-3.5 text-center font-bold text-slate-500">4</td>
+                                <td class="px-4 py-3.5 font-bold text-slate-800">
+                                    <span class="mr-1">🟣</span> RT 7
+                                </td>
+                                <td class="px-3 py-3.5 text-center">0</td>
+                                <td class="px-3 py-3.5 text-center">0</td>
+                                <td class="px-3 py-3.5 text-center">0</td>
+                                <td class="px-3 py-3.5 text-center">0</td>
+                                <td class="px-3 py-3.5 text-center">0</td>
+                                <td class="px-3 py-3.5 text-center">0</td>
+                                <td class="px-3 py-3.5 text-center">0</td>
+                                <td class="px-4 py-3.5 text-center font-bold text-slate-700 bg-slate-50">0</td>
+                            </tr>
+                            <!-- Posisi 5 -->
+                            <tr class="hover:bg-slate-50 transition">
+                                <td class="px-4 py-3.5 text-center font-bold text-slate-500">5</td>
+                                <td class="px-4 py-3.5 font-bold text-slate-800">
+                                    <span class="mr-1">🦁</span> RT 4
+                                </td>
+                                <td class="px-3 py-3.5 text-center">1</td>
+                                <td class="px-3 py-3.5 text-center text-slate-400">0</td>
+                                <td class="px-3 py-3.5 text-center text-slate-400">0</td>
+                                <td class="px-3 py-3.5 text-center text-red-500 font-bold">1</td>
+                                <td class="px-3 py-3.5 text-center">1</td>
+                                <td class="px-3 py-3.5 text-center">2</td>
+                                <td class="px-3 py-3.5 text-center text-rose-600 font-bold">-1</td>
+                                <td class="px-4 py-3.5 text-center font-bold text-slate-700 bg-slate-50">0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Keterangan Sistem Poin -->
+            <div class="grid grid-cols-3 gap-3 text-center text-xs font-semibold">
+                <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm">
+                    <span class="block text-emerald-600 font-black text-sm">3 Poin</span>
+                    <span class="text-slate-500">Menang Pertandingan</span>
+                </div>
+                <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm">
+                    <span class="block text-amber-500 font-black text-sm">1 Poin</span>
+                    <span class="text-slate-500">Hasil Seri / Imbang</span>
+                </div>
+                <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm">
+                    <span class="block text-rose-500 font-black text-sm">0 Poin</span>
+                    <span class="text-slate-500">Kalah Pertandingan</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB CONTENT 2: JADWAL HARIAN -->
+        <div id="content-jadwal" class="space-y-3 hidden">
+            <div class="bg-white rounded-xl p-4 border border-slate-200 flex flex-col sm:flex-row justify-between sm:items-center gap-3">
+                <div>
+                    <h3 class="font-bold text-slate-800 text-sm">Jadwal Pertandingan Non-Stop (Tgl 1 - 10)</h3>
+                    <p class="text-xs text-slate-500">1 Pertandingan Setiap Hari • Jam 16:00 WIB • Lapangan Jetak</p>
+                </div>
+                <!-- Filter Tim -->
+                <div class="flex items-center space-x-2">
+                    <label for="filterTim" class="text-xs font-bold text-slate-600">Filter Tim:</label>
+                    <select id="filterTim" onchange="filterSchedule()" class="text-xs bg-slate-100 border border-slate-300 font-semibold rounded-lg px-2.5 py-1.5 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                        <option value="ALL">Semua Tim RT</option>
+                        <option value="RT 1">RT 1</option>
+                        <option value="RT 2">RT 2</option>
+                        <option value="RT 4">RT 4</option>
+                        <option value="RT 6">RT 6</option>
+                        <option value="RT 7">RT 7</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- List Pertandingan -->
+            <div class="space-y-2.5" id="schedule-list">
+                <!-- Tgl 1 -->
+                <div class="match-card bg-white p-4 rounded-xl border border-emerald-200 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-3" data-teams="RT 4 RT 2">
+                    <div class="flex items-center space-x-3 text-xs text-slate-500 w-full sm:w-auto">
+                        <span class="bg-emerald-100 text-emerald-800 font-bold px-2.5 py-1 rounded-md">Tgl 1</span>
+                        <span><i class="fa-regular fa-clock mr-1"></i>16.00 WIB</span>
+                    </div>
+                    <div class="flex items-center justify-center space-x-4 font-bold text-slate-800 w-full sm:w-auto">
+                        <span class="w-16 text-right">RT 4</span>
+                        <span class="bg-emerald-600 text-white text-xs font-extrabold px-3 py-1 rounded-lg shadow-sm">1 - 2</span>
+                        <span class="w-16 text-left">RT 2</span>
+                    </div>
+                    <div class="text-xs text-slate-400 w-full sm:w-auto text-center sm:text-right">
+                        <span class="bg-slate-100 text-slate-600 font-bold px-2 py-0.5 rounded">Selesai</span>
+                    </div>
+                </div>
+
+                <!-- Tgl 2 -->
+                <div class="match-card bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-3" data-teams="RT 6 RT 7">
+                    <div class="flex items-center space-x-3 text-xs text-slate-500 w-full sm:w-auto">
+                        <span class="bg-slate-100 text-slate-700 font-bold px-2.5 py-1 rounded-md">Tgl 2</span>
+                        <span><i class="fa-regular fa-clock mr-1"></i>16.00 WIB</span>
+                    </div>
+                    <div class="flex items-center justify-center space-x-4 font-bold text-slate-800 w-full sm:w-auto">
+                        <span class="w-16 text-right">RT 6</span>
+                        <span class="bg-slate-200 text-slate-700 text-xs font-bold px-3 py-1 rounded-lg">VS</span>
+                        <span class="w-16 text-left">RT 7</span>
+                    </div>
+                    <div class="text-xs text-slate-500 w-full sm:w-auto text-center sm:text-right">
+                        <span>Lapangan Jetak</span>
+                    </div>
+                </div>
+
+                <!-- Tgl 3 -->
+                <div class="match-card bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-3" data-teams="RT 1 RT 4">
+                    <div class="flex items-center space-x-3 text-xs text-slate-500 w-full sm:w-auto">
+                        <span class="bg-slate-100 text-slate-700 font-bold px-2.5 py-1 rounded-md">Tgl 3</span>
+                        <span><i class="fa-regular fa-clock mr-1"></i>16.00 WIB</span>
+                    </div>
+                    <div class="flex items-center justify-center space-x-4 font-bold text-slate-800 w-full sm:w-auto">
+                        <span class="w-16 text-right">RT 1</span>
+                        <span class="bg-slate-200 text-slate-700 text-xs font-bold px-3 py-1 rounded-lg">VS</span>
+                        <span class="w-16 text-left">RT 4</span>
+                    </div>
+                    <div class="text-xs text-slate-500 w-full sm:w-auto text-center sm:text-right">
+                        <span>Lapangan Jetak</span>
+                    </div>
+                </div>
+
+                <!-- Tgl 4 -->
+                <div class="match-card bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-3" data-teams="RT 2 RT 6">
+                    <div class="flex items-center space-x-3 text-xs text-slate-500 w-full sm:w-auto">
+                        <span class="bg-slate-100 text-slate-700 font-bold px-2.5 py-1 rounded-md">Tgl 4</span>
+                        <span><i class="fa-regular fa-clock mr-1"></i>16.00 WIB</span>
+                    </div>
+                    <div class="flex items-center justify-center space-x-4 font-bold text-slate-800 w-full sm:w-auto">
+                        <span class="w-16 text-right">RT 2</span>
+                        <span class="bg-slate-200 text-slate-700 text-xs font-bold px-3 py-1 rounded-lg">VS</span>
+                        <span class="w-16 text-left">RT 6</span>
+                    </div>
+                    <div class="text-xs text-slate-500 w-full sm:w-auto text-center sm:text-right">
+                        <span>Lapangan Jetak</span>
+                    </div>
+                </div>
+
+                <!-- Tgl 5 -->
+                <div class="match-card bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-3" data-teams="RT 7 RT 1">
+                    <div class="flex items-center space-x-3 text-xs text-slate-500 w-full sm:w-auto">
+                        <span class="bg-slate-100 text-slate-700 font-bold px-2.5 py-1 rounded-md">Tgl 5</span>
+                        <span><i class="fa-regular fa-clock mr-1"></i>16.00 WIB</span>
+                    </div>
+                    <div class="flex items-center justify-center space-x-4 font-bold text-slate-800 w-full sm:w-auto">
+                        <span class="w-16 text-right">RT 7</span>
+                        <span class="bg-slate-200 text-slate-700 text-xs font-bold px-3 py-1 rounded-lg">VS</span>
+                        <span class="w-16 text-left">RT 1</span>
+                    </div>
+                    <div class="text-xs text-slate-500 w-full sm:w-auto text-center sm:text-right">
+                        <span>Lapangan Jetak</span>
+                    </div>
+                </div>
+
+                <!-- Tgl 6 -->
+                <div class="match-card bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-3" data-teams="RT 4 RT 6">
+                    <div class="flex items-center space-x-3 text-xs text-slate-500 w-full sm:w-auto">
+                        <span class="bg-slate-100 text-slate-700 font-bold px-2.5 py-1 rounded-md">Tgl 6</span>
+                        <span><i class="fa-regular fa-clock mr-1"></i>16.00 WIB</span>
+                    </div>
+                    <div class="flex items-center justify-center space-x-4 font-bold text-slate-800 w-full sm:w-auto">
+                        <span class="w-16 text-right">RT 4</span>
+                        <span class="bg-slate-200 text-slate-700 text-xs font-bold px-3 py-1 rounded-lg">VS</span>
+                        <span class="w-16 text-left">RT 6</span>
+                    </div>
+                    <div class="text-xs text-slate-500 w-full sm:w-auto text-center sm:text-right">
+                        <span>Lapangan Jetak</span>
+                    </div>
+                </div>
+
+                <!-- Tgl 7 -->
+                <div class="match-card bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-3" data-teams="RT 6 RT 1">
+                    <div class="flex items-center space-x-3 text-xs text-slate-500 w-full sm:w-auto">
+                        <span class="bg-slate-100 text-slate-700 font-bold px-2.5 py-1 rounded-md">Tgl 7</span>
+                        <span><i class="fa-regular fa-clock mr-1"></i>16.00 WIB</span>
+                    </div>
+                    <div class="flex items-center justify-center space-x-4 font-bold text-slate-800 w-full sm:w-auto">
+                        <span class="w-16 text-right">RT 6</span>
+                        <span class="bg-slate-200 text-slate-700 text-xs font-bold px-3 py-1 rounded-lg">VS</span>
+                        <span class="w-16 text-left">RT 1</span>
+                    </div>
+                    <div class="text-xs text-slate-500 w-full sm:w-auto text-center sm:text-right">
+                        <span>Lapangan Jetak</span>
+                    </div>
+                </div>
+
+                <!-- Tgl 8 -->
+                <div class="match-card bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-3" data-teams="RT 2 RT 7">
+                    <div class="flex items-center space-x-3 text-xs text-slate-500 w-full sm:w-auto">
+                        <span class="bg-slate-100 text-slate-700 font-bold px-2.5 py-1 rounded-md">Tgl 8</span>
+                        <span><i class="fa-regular fa-clock mr-1"></i>16.00 WIB</span>
+                    </div>
+                    <div class="flex items-center justify-center space-x-4 font-bold text-slate-800 w-full sm:w-auto">
+                        <span class="w-16 text-right">RT 2</span>
+                        <span class="bg-slate-200 text-slate-700 text-xs font-bold px-3 py-1 rounded-lg">VS</span>
+                        <span class="w-16 text-left">RT 7</span>
+                    </div>
+                    <div class="text-xs text-slate-500 w-full sm:w-auto text-center sm:text-right">
+                        <span>Lapangan Jetak</span>
+                    </div>
+                </div>
+
+                <!-- Tgl 9 -->
+                <div class="match-card bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-3" data-teams="RT 7 RT 4">
+                    <div class="flex items-center space-x-3 text-xs text-slate-500 w-full sm:w-auto">
+                        <span class="bg-slate-100 text-slate-700 font-bold px-2.5 py-1 rounded-md">Tgl 9</span>
+                        <span><i class="fa-regular fa-clock mr-1"></i>16.00 WIB</span>
+                    </div>
+                    <div class="flex items-center justify-center space-x-4 font-bold text-slate-800 w-full sm:w-auto">
+                        <span class="w-16 text-right">RT 7</span>
+                        <span class="bg-slate-200 text-slate-700 text-xs font-bold px-3 py-1 rounded-lg">VS</span>
+                        <span class="w-16 text-left">RT 4</span>
+                    </div>
+                    <div class="text-xs text-slate-500 w-full sm:w-auto text-center sm:text-right">
+                        <span>Lapangan Jetak</span>
+                    </div>
+                </div>
+
+                <!-- Tgl 10 -->
+                <div class="match-card bg-white p-4 rounded-xl border border-amber-200 bg-amber-50/40 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-3" data-teams="RT 1 RT 2">
+                    <div class="flex items-center space-x-3 text-xs text-slate-500 w-full sm:w-auto">
+                        <span class="bg-amber-400 text-amber-950 font-black px-2.5 py-1 rounded-md">Tgl 10</span>
+                        <span><i class="fa-regular fa-clock mr-1"></i>16.00 WIB</span>
+                    </div>
+                    <div class="flex items-center justify-center space-x-4 font-bold text-slate-800 w-full sm:w-auto">
+                        <span class="w-16 text-right">RT 1</span>
+                        <span class="bg-amber-500 text-white text-xs font-black px-3 py-1 rounded-lg">PENUTUP</span>
+                        <span class="w-16 text-left">RT 2</span>
+                    </div>
+                    <div class="text-xs text-amber-700 font-bold w-full sm:w-auto text-center sm:text-right">
+                        <span>🏆 Match 10 / Final</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-400 py-6 border-t border-slate-800 mt-10">
+        <div class="max-w-5xl mx-auto px-4 text-center text-xs space-y-2">
+            <p class="font-semibold text-slate-300">LIGA SEPAK BOLA PSJ 2026 • LAPANGAN JETAK</p>
+            <p class="text-slate-500">Membina Generasi Muda, Menjunjung Tinggi Sportivitas & Kegembiraan Anak-Anak</p>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE JAVASCRIPT -->
+    <script>
+        function switchTab(tabName) {
+            const tabKlasemen = document.getElementById('tab-klasemen');
+            const tabJadwal = document.getElementById('tab-jadwal');
+            const contentKlasemen = document.getElementById('content-klasemen');
+            const contentJadwal = document.getElementById('content-jadwal');
+
+            if (tabName === 'klasemen') {
+                tabKlasemen.classList.add('tab-active');
+                tabKlasemen.classList.remove('text-slate-600');
+                tabJadwal.classList.remove('tab-active');
+                tabJadwal.classList.add('text-slate-600');
+
+                contentKlasemen.classList.remove('hidden');
+                contentJadwal.classList.add('hidden');
+            } else {
+                tabJadwal.classList.add('tab-active');
+                tabJadwal.classList.remove('text-slate-600');
+                tabKlasemen.classList.remove('tab-active');
+                tabKlasemen.classList.add('text-slate-600');
+
+                contentJadwal.classList.remove('hidden');
+                contentKlasemen.classList.add('hidden');
+            }
+        }
+
+        function filterSchedule() {
+            const selectedTeam = document.getElementById('filterTim').value;
+            const cards = document.querySelectorAll('.match-card');
+
+            cards.forEach(card => {
+                const teams = card.getAttribute('data-teams');
+                if (selectedTeam === 'ALL' || teams.includes(selectedTeam)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
